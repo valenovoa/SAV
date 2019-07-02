@@ -1,0 +1,98 @@
+﻿@model SAV.Models.VUELO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar vuelo</h2>
+
+<h3>Seguro que desea eliminar el vuelo  @Html.DisplayFor(model => model.COD_VUELO)?</h3>
+<div>
+    <h4>VUELO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_SALIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_SALIDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.AEROPUERTO1.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.AEROPUERTO1.NOM_AEROPUERTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.HORA_SALIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.HORA_SALIDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.AEROPUERTO.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.AEROPUERTO.NOM_AEROPUERTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.HORA_LLEGADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.HORA_LLEGADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MILLAS_REALES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MILLAS_REALES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MILLAS_OTROGADAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MILLAS_OTROGADAS)
+        </dd>
+
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVION.PLACA_AVION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVION.PLACA_AVION)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.NOM_CORTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LINEA_AEREA.NOM_CORTO)
+        </dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

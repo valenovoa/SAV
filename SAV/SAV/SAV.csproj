@@ -127,16 +127,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BaseDatos\DB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB.edmx</DependentUpon>
-      <LastGenOutput>DB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="BaseDatos\DB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB.edmx</DependentUpon>
-      <LastGenOutput>DB.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -188,13 +178,6 @@
     <Content Include="Content\js\jquery.metisMenu.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="BaseDatos\DB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="BaseDatos\DB.edmx.diagram">
-      <DependentUpon>DB.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -229,137 +212,159 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Models\DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB.edmx</DependentUpon>
+      <LastGenOutput>DB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB.edmx</DependentUpon>
+      <LastGenOutput>DB.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Views\Access\Registrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BaseDatos\AEROPUERTO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\ASIENTO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\AVION.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\CIUDAD.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\CLIENTE_EMPRESARIAL.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\CLIENTE_NATURAL.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\DB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\DB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\DB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\DISPONIBILIDAD_CLASE.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\GENERO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\GETAWEY.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\HORARIOS.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\HORARIO_VUELO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\ITINERARIO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\LINEA_AEREA.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\MALETA_EXTRA.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\MARCA_AVION.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\Menu.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\MenuTemp.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\ORIGENDESTINO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\PAIS.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\PASAJERO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\Permission.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\Persona.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\REGION.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\REGISTRO_PAGO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\RESERVACION.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\ROL.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\SUBREGION.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\sysdiagrams.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\TICKETS.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\TIPO_AVION.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\TIPO_CLASE.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\TIPO_DOCUMENTO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\USUARIO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDatos\VUELO.cs">
-      <DependentUpon>DB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccessController.cs" />
+    <Compile Include="Controllers\AeropuertoController.cs" />
+    <Compile Include="Controllers\AvionController.cs" />
+    <Compile Include="Controllers\ClienteNaturalController.cs" />
+    <Compile Include="Controllers\GetaweyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItinerariosController.cs" />
+    <Compile Include="Controllers\LineaAereaController.cs" />
+    <Compile Include="Controllers\VueloController.cs" />
     <Compile Include="Crypto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ResetContraModel.cs" />
-    <Compile Include="Models\UserLogin.cs" />
-    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\AEROPUERTO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASIENTO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVION.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CIUDAD.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLIENTE_EMPRESARIAL.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLIENTE_NATURAL.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DISPONIBILIDAD.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Extra\AEROPUERTO.cs" />
+    <Compile Include="Models\Extra\AVION.cs" />
+    <Compile Include="Models\Extra\CLIENTE_NATURAL.cs" />
+    <Compile Include="Models\Extra\GENERO.cs" />
+    <Compile Include="Models\Extra\GETAWEY.cs" />
+    <Compile Include="Models\Extra\ITINERARIO.cs" />
+    <Compile Include="Models\Extra\LINEA_AEREA.cs" />
+    <Compile Include="Models\Extra\Menu.cs" />
+    <Compile Include="Models\Extra\MenuController.cs" />
+    <Compile Include="Models\Extra\PAIS.cs" />
+    <Compile Include="Models\Extra\REGION.cs" />
+    <Compile Include="Models\Extra\ResetContraModel.cs" />
+    <Compile Include="Models\Extra\SUBREGION.cs" />
+    <Compile Include="Models\Extra\TIPO_DOCUMENTO.cs" />
+    <Compile Include="Models\Extra\UserLogin.cs" />
+    <Compile Include="Models\Extra\Usuario.cs" />
+    <Compile Include="Models\Extra\VUELO.cs" />
+    <Compile Include="Models\GENERO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GETAWEY.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ITINERARIO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LINEA_AEREA.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MALETA_EXTRA.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MARCA_AVION.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menu.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MenuTemp.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAIS.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PASAJERO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Permission.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Persona.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\REGION.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\REGISTRO_PAGO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVACION.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ROL.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUBREGION.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TICKETS.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_AVION.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_CLASE.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_DOCUMENTO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USUARIO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VUELO.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -381,6 +386,53 @@
     <Content Include="Views\Shared\_menus.cshtml" />
     <Content Include="Views\Shared\_menuArriba.cshtml" />
     <Content Include="Views\Shared\_menulateral.cshtml" />
+    <Content Include="Views\Aeropuerto\Create.cshtml" />
+    <Content Include="Views\Aeropuerto\Delete.cshtml" />
+    <Content Include="Views\Aeropuerto\Details.cshtml" />
+    <Content Include="Views\Aeropuerto\Edit.cshtml" />
+    <Content Include="Views\Aeropuerto\Index.cshtml" />
+    <Content Include="Views\Avion\Create.cshtml" />
+    <Content Include="Views\Avion\Delete.cshtml" />
+    <Content Include="Views\Avion\Details.cshtml" />
+    <Content Include="Views\Avion\Edit.cshtml" />
+    <Content Include="Views\Avion\Index.cshtml" />
+    <Content Include="Views\LineaAerea\Create.cshtml" />
+    <Content Include="Views\LineaAerea\Delete.cshtml" />
+    <Content Include="Views\LineaAerea\Details.cshtml" />
+    <Content Include="Views\LineaAerea\Edit.cshtml" />
+    <Content Include="Views\LineaAerea\Index.cshtml" />
+    <Content Include="Views\Getawey\Create.cshtml" />
+    <Content Include="Views\Getawey\Delete.cshtml" />
+    <Content Include="Views\Getawey\Details.cshtml" />
+    <Content Include="Views\Getawey\Edit.cshtml" />
+    <Content Include="Views\Getawey\Index.cshtml" />
+    <Content Include="Views\Itinerarios\Create.cshtml" />
+    <Content Include="Views\Itinerarios\Delete.cshtml" />
+    <Content Include="Views\Itinerarios\Details.cshtml" />
+    <Content Include="Views\Itinerarios\Edit.cshtml" />
+    <Content Include="Views\Itinerarios\Index.cshtml" />
+    <Content Include="Views\Vuelo\Create.cshtml" />
+    <Content Include="Views\Vuelo\Delete.cshtml" />
+    <Content Include="Views\Vuelo\Details.cshtml" />
+    <Content Include="Views\Vuelo\Edit.cshtml" />
+    <Content Include="Views\Vuelo\Index.cshtml" />
+    <EntityDeploy Include="Models\DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DB.edmx.diagram">
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\ClienteNatural\Create.cshtml" />
+    <Content Include="Views\ClienteNatural\Delete.cshtml" />
+    <Content Include="Views\ClienteNatural\Details.cshtml" />
+    <Content Include="Views\ClienteNatural\Edit.cshtml" />
+    <Content Include="Views\ClienteNatural\Index.cshtml" />
+    <Content Include="Views\Menu\Create.cshtml" />
+    <Content Include="Views\Menu\Delete.cshtml" />
+    <Content Include="Views\Menu\Details.cshtml" />
+    <Content Include="Views\Menu\Edit.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

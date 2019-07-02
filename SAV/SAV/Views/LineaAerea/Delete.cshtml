@@ -1,0 +1,135 @@
+﻿@model SAV.Models.LINEA_AEREA
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar linea aerea</h2>
+
+<h3>Esta seguro de eliminar la linea aerea?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_LINEA_AEREA )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_LINEA_AEREA )
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_OFICIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_OFICIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_CORTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_CORTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_REPRESENTANTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_REPRESENTANTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FACEBOOK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FACEBOOK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TWITTER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TWITTER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INSTAGRAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INSTAGRAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YOUTUBE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YOUTUBE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_FUNDACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_FUNDACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_LA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_LA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAIS.NOM_PAIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAIS.NOM_PAIS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

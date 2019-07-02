@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SAV.Models.CLIENTE_NATURAL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_DOCUMETO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_CIVIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_MILLAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_VIAJERO_FREC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.PRIMER_NOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GENERO.NOM_GENERO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_DOCUMENTO.NOM_DOCUMENTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_DOCUMETO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_CIVIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_MILLAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_VIAJERO_FREC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Persona.PRIMER_NOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GENERO.NOM_GENERO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_DOCUMENTO.NOM_DOCUMENTO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_NATURAL }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_NATURAL }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_NATURAL })
+        </td>
+    </tr>
+}
+
+</table>

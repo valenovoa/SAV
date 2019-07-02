@@ -1,0 +1,48 @@
+﻿@model SAV.Models.AEROPUERTO
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro de eliminar este aeropuerto ?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD.NOM_CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD.NOM_CIUDAD)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

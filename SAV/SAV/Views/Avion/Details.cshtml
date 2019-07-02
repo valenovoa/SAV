@@ -1,0 +1,66 @@
+﻿@model SAV.Models.AVION
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle del avion</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PLACA_AVION )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLACA_AVION )
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.CAPACIDAD_ASIENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAPACIDAD_ASIENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_AVION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_AVION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.COD_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LINEA_AEREA.COD_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MARCA_AVION.MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MARCA_AVION.MARCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_AVION.NOM_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_AVION.NOM_TIPO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Ediatr", "Edit", new { id = Model.PLACA_AVION }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

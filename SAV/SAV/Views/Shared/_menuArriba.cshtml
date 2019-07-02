@@ -1,5 +1,6 @@
 ﻿ <!--Menu de arriba  -->
 
+
 <div id="page-wrapper" class="gray-bg dashbard-1">
     <div class="row border-bottom">
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -14,15 +15,27 @@
                 </form>
             </div>
 
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <span class="m-r-sm text-muted welcome-message">Bienvenidos  
+                    @HttpContext.Current.User.Identity.Name
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <span class="m-r-sm text-muted welcome-message">Bienvenidos a Viserion Airline</span>
-                </li>
+                a Viserion Airline</span>
+            </li>
+            <li>
                 <!--Cerrar sesion  -->
+               
+                @using (Html.BeginForm("Logout","Access", FormMethod.Post, new { id="logoutForm"}))
+                {
+                <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+                }
+               
+                </li>
 
-                
-            </ul>
+</ul>
+
+    
+               
 
         </nav>
     </div>

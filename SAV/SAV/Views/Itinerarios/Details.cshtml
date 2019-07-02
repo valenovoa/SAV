@@ -1,0 +1,50 @@
+﻿@model SAV.Models.ITINERARIO
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle itinerario</h2>
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_SALIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_SALIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_LLEGADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_LLEGADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROPUERTO1.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROPUERTO1.NOM_AEROPUERTO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_ITINERARIO }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

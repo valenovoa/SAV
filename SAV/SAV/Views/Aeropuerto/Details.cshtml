@@ -1,0 +1,48 @@
+﻿@model SAV.Models.AEROPUERTO
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles del aeropuerto</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_AEROPUERTO )
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_AEROPUERTO )
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD.NOM_CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD.NOM_CIUDAD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.COD_AEROPUERTO }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

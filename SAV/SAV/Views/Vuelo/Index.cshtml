@@ -1,0 +1,95 @@
+﻿@model IEnumerable<SAV.Models.VUELO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vuelo</h2>
+
+<p>
+    @Html.ActionLink("Agregar vuelo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_VUELO )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MILLAS_REALES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MILLAS_OTROGADAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_SALIDA)
+        </th>
+     
+        <th>
+            @Html.DisplayNameFor(model => model.AVION.PLACA_AVION  )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITINERARIO.ORIGEN  )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITINERARIO.HORA_SALIDA )
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ITINERARIO.DESTINO )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITINERARIO.HORA_LLEGADA )
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.NOM_CORTO )
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_VUELO )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MILLAS_REALES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MILLAS_OTROGADAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_SALIDA)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.AVION.PLACA_AVION )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITINERARIO.AEROPUERTO1.NOM_AEROPUERTO  )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITINERARIO.HORA_SALIDA )
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.ITINERARIO.AEROPUERTO.NOM_AEROPUERTO )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITINERARIO.HORA_LLEGADA )
+        </td>
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.LINEA_AEREA.NOM_CORTO )
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.COD_VUELO }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.COD_VUELO }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.COD_VUELO })
+        </td>
+    </tr>
+}
+
+</table>

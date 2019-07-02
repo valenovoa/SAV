@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SAV.Models.AVION>
+
+@{
+    ViewBag.Title = "Avion";
+}
+
+<h2>Avion</h2>
+
+<p>
+    @Html.ActionLink("Agregar nuevo avion", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PLACA_AVION )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAPACIDAD_ASIENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_AVION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.COD_AEROPUERTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MARCA_AVION.MARCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_AVION.NOM_TIPO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PLACA_AVION )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAPACIDAD_ASIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_AVION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LINEA_AEREA.COD_AEROPUERTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MARCA_AVION.MARCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_AVION.NOM_TIPO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PLACA_AVION }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.PLACA_AVION }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.PLACA_AVION })
+        </td>
+    </tr>
+}
+
+</table>

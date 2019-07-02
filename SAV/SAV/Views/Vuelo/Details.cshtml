@@ -1,0 +1,91 @@
+﻿@model SAV.Models.VUELO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalle del vuelo</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.COD_VUELO )</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_SALIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_SALIDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.AEROPUERTO1.NOM_AEROPUERTO  )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.AEROPUERTO1.NOM_AEROPUERTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.HORA_SALIDA )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.HORA_SALIDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.AEROPUERTO.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.AEROPUERTO.NOM_AEROPUERTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ITINERARIO.HORA_LLEGADA )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITINERARIO.HORA_LLEGADA )
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MILLAS_REALES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MILLAS_REALES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MILLAS_OTROGADAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MILLAS_OTROGADAS)
+        </dd>
+              
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVION.PLACA_AVION )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVION.PLACA_AVION)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.NOM_CORTO )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LINEA_AEREA.NOM_CORTO )
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_VUELO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

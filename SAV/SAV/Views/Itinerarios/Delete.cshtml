@@ -1,0 +1,56 @@
+﻿@model SAV.Models.ITINERARIO
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar itinerario</h2>
+
+<h3>Esta seguro de eliminar el itinerario?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_SALIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_SALIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_LLEGADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_LLEGADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROPUERTO1.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROPUERTO1.NOM_AEROPUERTO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

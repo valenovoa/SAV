@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1d28acab41f24e3b9e9fc9eed6dae7e0" Name="Diagram1">
+        <EntityTypeShape EntityType="sistemadevueloModel.AEROPUERTO" Width="1.5" PointX="9.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.ASIENTO" Width="1.5" PointX="19.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.AVION" Width="1.5" PointX="14.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.CIUDAD" Width="1.5" PointX="7.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.CLIENTE_EMPRESARIAL" Width="1.5" PointX="7.5" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.CLIENTE_NATURAL" Width="1.5" PointX="10.5" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.DISPONIBILIDAD" Width="1.5" PointX="21.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.GENERO" Width="1.5" PointX="8.25" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.GETAWEY" Width="1.5" PointX="16.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.ITINERARIO" Width="1.5" PointX="12" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.LINEA_AEREA" Width="1.5" PointX="12" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.MALETA_EXTRA" Width="1.5" PointX="21.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.MARCA_AVION" Width="1.5" PointX="12" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.Menu" Width="1.5" PointX="0.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.PAIS" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.PASAJERO" Width="1.5" PointX="7.5" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.Permission" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.Persona" Width="1.5" PointX="5.25" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.REGION" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.REGISTRO_PAGO" Width="1.5" PointX="24" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.RESERVACION" Width="1.5" PointX="21.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.ROL" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.SUBREGION" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.TICKETS" Width="1.5" PointX="19.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.TIPO_AVION" Width="1.5" PointX="12" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.TIPO_CLASE" Width="1.5" PointX="17.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.TIPO_DOCUMENTO" Width="1.5" PointX="8.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.USUARIO" Width="1.5" PointX="3" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.VUELO" Width="1.5" PointX="19.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistemadevueloModel.MenuTemp" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="sistemadevueloModel.FK_AEROPUERTO_CIUDAD" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_GETAWEY_AEROPUERTO" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_ITI_DES_AE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_ITI_DEST_AE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_LINEA_AEREA_AEROPUERTO" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_ASIENTO_CLASE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_ASIENTO_DISP" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_AVION_LINEA_AEREA" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_AVION_MARCA_AVION" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_AVION_TIPO_AVION" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_GETAWEY_AVION" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_VUELOn_AVION" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_CIUDAD_SUBBREGION" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_CLIENTE_EMPRESARIAL_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_CLIENTE_NATURAL_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_CLIENTE_NATURAL_GENERO" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_CLIENTE_NATURAL_TD" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_ASIENTO_VUELO" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_GT_LA" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_vuelo_itine" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_LINEA_AEREA_PAIS" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_VUELO_LINEA_AEREA" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_REGISTRO_PAGO_MALETA_EXTRA" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_Permission_MenuID" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_Permission_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_PASAJERO_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_TICKETS_PASAJERO" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_Permission_RoleID" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_Persona_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_Permission_subRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_REGISTRO_PAGO_RESERVACION" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_REGISTRO_PAGO_TIPO_CLASE" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_reservacion_vuelo" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_USUARIO_ROL1" ManuallyRouted="false" />
+        <AssociationConnector Association="sistemadevueloModel.FK_TICKETS_TIPO_CLASE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

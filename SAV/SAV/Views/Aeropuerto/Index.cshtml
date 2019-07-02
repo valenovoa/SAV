@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SAV.Models.AEROPUERTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Aeropuerto</h2>
+
+<p>
+    @Html.ActionLink("Agregar aeropuerto", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.COD_AEROPUERTO )
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_AEROPUERTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIUDAD.NOM_CIUDAD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_AEROPUERTO )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_AEROPUERTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD.NOM_CIUDAD)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.COD_AEROPUERTO }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.COD_AEROPUERTO }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.COD_AEROPUERTO })
+        </td>
+    </tr>
+}
+
+</table>

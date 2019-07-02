@@ -13,6 +13,7 @@ namespace SAV
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
         }
     }
 }

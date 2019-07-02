@@ -1,0 +1,96 @@
+﻿@model SAV.Models.GETAWEY
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro de eliminar el getawey?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMERO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMERO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_ABORDAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_ABORDAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_ABORDAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_ABORDAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_DESABORDAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_DESABORDAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_DESABORDAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_DESABORDAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_GETAWEY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_GETAWEY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVION.COD_MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVION.COD_MARCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.COD_AEROPUERTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LINEA_AEREA.COD_AEROPUERTO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

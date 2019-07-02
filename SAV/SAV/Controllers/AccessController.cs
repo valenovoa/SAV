@@ -1,4 +1,5 @@
-﻿using SAV.BaseDatos;
+﻿
+
 using SAV.Models;
 using System;
 using System.Collections.Generic;
@@ -176,6 +177,10 @@ namespace SAV.Controllers
                         }
                         else
                         {
+
+                            Session["ID"] = v.ID_USUARIO;
+                            Session["CODROL"] = v.COD_ROL;
+                            
                             return RedirectToAction("Index", "Home");
                         }
                     }

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SAV.Models.ITINERARIO>
+
+@{
+    ViewBag.Title = "Itinerario";
+}
+
+<h2>Itinerario</h2>
+
+<p>
+    @Html.ActionLink("Agregar itinerario", "Create")
+</p>
+<table class="table">
+    <tr>
+       
+        
+        <th>
+            @Html.DisplayNameFor(model => model.AEROPUERTO1.NOM_AEROPUERTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_SALIDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_LLEGADA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.AEROPUERTO1.NOM_AEROPUERTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_SALIDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AEROPUERTO.NOM_AEROPUERTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_LLEGADA)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID_ITINERARIO }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.ID_ITINERARIO }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ID_ITINERARIO })
+        </td>
+    </tr>
+}
+
+</table>

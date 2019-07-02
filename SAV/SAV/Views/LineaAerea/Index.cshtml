@@ -1,0 +1,112 @@
+﻿@model IEnumerable<SAV.Models.LINEA_AEREA>
+
+@{
+    ViewBag.Title = "Lineas aereas";
+}
+
+<h2>Lineas aereas</h2>
+
+<p>
+    @Html.ActionLink("Agregar linea aerea", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_LINEA_AEREA )
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_OFICIAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_CORTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_REPRESENTANTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FACEBOOK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TWITTER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INSTAGRAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YOUTUBE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_FUNDACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_LA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAIS.NOM_PAIS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_LINEA_AEREA )
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_OFICIAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_CORTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_REPRESENTANTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FACEBOOK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TWITTER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INSTAGRAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YOUTUBE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_FUNDACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_LA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AEROPUERTO.NOM_AEROPUERTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAIS.NOM_PAIS)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.COD_LINEA_AEREA }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.COD_LINEA_AEREA }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.COD_LINEA_AEREA })
+        </td>
+    </tr>
+}
+
+</table>

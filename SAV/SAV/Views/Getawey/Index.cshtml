@@ -1,0 +1,82 @@
+﻿@model IEnumerable<SAV.Models.GETAWEY>
+
+@{
+    ViewBag.Title = "Getawey";
+}
+
+<h2>Getawey</h2>
+
+<p>
+    @Html.ActionLink("Agregar getawey", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.NUMERO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_ABORDAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_ABORDAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_DESABORDAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_DESABORDAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_GETAWEY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AEROPUERTO.NOM_AEROPUERTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVION.COD_MARCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LINEA_AEREA.COD_AEROPUERTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMERO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_ABORDAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_ABORDAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_DESABORDAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_DESABORDAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_GETAWEY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AEROPUERTO.NOM_AEROPUERTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVION.COD_MARCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LINEA_AEREA.COD_AEROPUERTO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID_GETEWAY }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.ID_GETEWAY }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ID_GETEWAY })
+        </td>
+    </tr>
+}
+
+</table>
